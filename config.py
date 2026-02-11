@@ -1,3 +1,5 @@
+from datetime import datetime
+
 INTERNALS_IP = ('10.','192.168.')
 SENSITIVE_PORTS = ('22','23','3389')
 MAX_SIZE = 5000
