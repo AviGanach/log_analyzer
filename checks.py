@@ -35,3 +35,22 @@ def sensitive_ports(data:list[list[str]]) -> list[str]:
         return sensitive
     except Exception as e:
         raise e
+
+# כתבו פונקציה שמקבלת את הנתונים ומחזירה רשימה של כל השורות עם חבילות
+# מעל 5000 בייט.
+
+def is_large(size:int) -> bool:
+    try:
+        return size > MAX_SIZE
+    except Exception as e:
+        raise e
+
+def large_size(data:list[list[str]]) -> list[str]:
+    try:
+        larges = []
+        for line in data:
+            if is_large(int(line[5])):
+                larges.append(line[5])
+        return larges
+    except Exception as e:
+        raise e
